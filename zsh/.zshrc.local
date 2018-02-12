@@ -1,0 +1,71 @@
+prompt_context() {}
+
+export PATH=~/bin:$PATH
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export PATH=$PATH:~/bin
+export EDITOR=nvim
+
+export HISTSIZE=10000
+export HISTFILESIZE=20000
+
+# default to nvim
+export EDITOR=vim
+alias vim=nvim
+alias vi=nvim
+alias nv=nvim
+
+# kubectl
+alias ki="kubectl --context infra-185.k8s.ivx.cloud"
+alias ks="kubectl --context staging-185.k8s.ivx.cloud"
+alias kp="kubectl --context production-186.k8s.ivx.cloud"
+alias kd="kubectl --context docker-for-desktop"
+
+# python
+alias python="python3"
+
+# terraform
+alias tf=terraform
+alias tfp="terraform plan"
+alias tfa="terraform apply"
+
+# git
+alias gs="git status"
+alias gc="git commit"
+alias ga="git add"
+alias gps="git push"
+alias gpu="echo 'Use gps!'"
+alias gpl="git pull"
+alias gg="git grep"
+
+alias dr="docker run"
+alias db="docker build"
+# Do not lose colorscheme support in vim
+alias tmux="TERM=screen-256color-bce tmux"
+
+# completion
+source <(kubectl completion zsh)
+source <(kops completion zsh)
+#source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+#source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+# Put completion files in ~/.zsh/completion
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
+
+# warp
+#source /usr/local/bin/warp
+
+# chef
+# Don't annoy regarding ed25519 keys
+export NET_SSH_NO_RBNACL=true
+
+# Set default user for agnoster zsh theme
+#export DEFAULT_USER=daniel
+
+# source private data that doesn't belong in a git repo.
+source ~/.secrets
+
+export KOPS_STATE_STORE=s3://kops-kubernetes-state
+
+#source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

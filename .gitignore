@@ -1,0 +1,6 @@
+.secrets
+.DS_Store
+vim/plugged
+vim/.netrwhist
+vim/undo
+auth
