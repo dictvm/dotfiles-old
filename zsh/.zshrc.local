@@ -1,12 +1,8 @@
 prompt_context() {}
 
 export PATH=~/bin:$PATH
-
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-export PATH=$PATH:~/bin
-export EDITOR=nvim
-
 export HISTSIZE=10000
 export HISTFILESIZE=20000
 
@@ -26,7 +22,7 @@ alias kd="kubectl --context docker-for-desktop"
 alias python="python3"
 
 # terraform
-alias tf=terraform
+alias tf="terraform"
 alias tfp="terraform plan"
 alias tfa="terraform apply"
 
@@ -35,14 +31,13 @@ alias gs="git status"
 alias gc="git commit"
 alias ga="git add"
 alias gps="git push"
-alias gpu="echo 'Use gps!'"
 alias gpl="git pull"
 alias gg="git grep"
 
 alias dr="docker run"
 alias db="docker build"
 # Do not lose colorscheme support in vim
-alias tmux="TERM=screen-256color-bce tmux"
+alias tmux="TERM=screen-256color tmux"
 
 # completion
 source <(kubectl completion zsh)
