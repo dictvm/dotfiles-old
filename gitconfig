@@ -1,0 +1,41 @@
+[core]
+	editor = nvim
+	excludesfile = ~/.gitignore
+[color]
+  ui = auto
+	branch = auto
+	diff = auto
+	status = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[push]
+	default = matching
+[pull]
+#	rebase = true
+[merge]
+#	ff = only
+[include]
+  path = .gitconfig.local
+[diff]
+	compactionHeuristic = true
+[http]
+	cookiefile = /Users/daniel.heitmann/.gitcookies
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Daniel Heitmann
+	email = dictvm@dictvm.org

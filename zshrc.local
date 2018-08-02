@@ -1,10 +1,16 @@
 prompt_context() {}
 
-export PATH=~/bin:$PATH
+# Fix watch not working with aliases
+alias watch='watch '
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH="~/bin:$PATH"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export HISTSIZE=10000
 export HISTFILESIZE=20000
+
+# xcon gcp
+export GOOGLE_CREDENTIALS="~/.gke-account.json"
 
 # default to nvim
 export EDITOR=vim
@@ -13,10 +19,10 @@ alias vi=nvim
 alias nv=nvim
 
 # kubectl
-alias ki="kubectl --context infra-185.k8s.ivx.cloud"
-alias ks="kubectl --context staging-185.k8s.ivx.cloud"
-alias kp="kubectl --context production-186.k8s.ivx.cloud"
-alias kd="kubectl --context docker-for-desktop"
+alias ki="kubectl --context infra.k8s.ivx.cloud"
+alias ks="kubectl --context staging.k8s.ivx.cloud"
+alias kp="kubectl --context production.k8s.ivx.cloud"
+alias km="kubectl --context minikube"
 
 # python
 alias python="python3"
@@ -26,14 +32,6 @@ alias tf="terraform"
 alias tfp="terraform plan"
 alias tfa="terraform apply"
 
-# git
-alias gs="git status"
-alias gc="git commit"
-alias ga="git add"
-alias gps="git push"
-alias gpl="git pull"
-alias gg="git grep"
-
 alias dr="docker run"
 alias db="docker build"
 # Do not lose colorscheme support in vim
@@ -42,21 +40,9 @@ alias tmux="TERM=screen-256color tmux"
 # completion
 source <(kubectl completion zsh)
 source <(kops completion zsh)
-#source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-#source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 # Put completion files in ~/.zsh/completion
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
-
-# warp
-#source /usr/local/bin/warp
-
-# chef
-# Don't annoy regarding ed25519 keys
-export NET_SSH_NO_RBNACL=true
-
-# Set default user for agnoster zsh theme
-#export DEFAULT_USER=daniel
 
 # source private data that doesn't belong in a git repo.
 source ~/.secrets

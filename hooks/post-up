@@ -1,0 +1,14 @@
+#!/bin/sh
+
+if [ ! -e "$HOME"/.config/nvim/autoload/plug.vim ]; then
+  curl -fLo "$HOME"/.config/nvim/autoload/plug.vim --create-dirs \
+      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
+nvim -u "$HOME"/.config/nvim/init.vim.bundles +PlugInstall +PlugClean! +qa
+
+reset -Q
+
+# Install tmux plugin manager
+if [ ! -f "${HOME}/.tmux/plugins/tpm/README.md" ]; then
+  git clone https://github.com/tmux-plugins/tpm "${HOME}/.tmux/plugins/tpm"
+fi
