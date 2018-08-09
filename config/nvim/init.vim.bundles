@@ -16,6 +16,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'hashivim/vim-terraform'
 Plug 'fatih/vim-go'
 Plug 'ddollar/golang-template.vim'
+Plug 'RRethy/vim-illuminate'
 Plug 'scrooloose/nerdtree'
 
 " Colorschemes
@@ -77,7 +78,7 @@ Plug 'google/yapf'
 Plug 'python-mode/python-mode'
 
 " Git
-Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " Markdown / Writing
 Plug 'reedes/vim-pencil'
