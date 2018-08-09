@@ -35,9 +35,6 @@ set smarttab                      " Enable smart-tabs
 set softtabstop=2                 " Number of spaces per Tab
 set tabstop=2
 set shiftwidth=2
-:highlight ExtraWhitespace ctermbg=darkblue guibg=darkblue
-
-" Filetypes
 filetype on                       " Enable filetype detection
 filetype plugin on                " Enable filetype-specific plugins
 filetype indent on                " Enable filetype-specific indenting
