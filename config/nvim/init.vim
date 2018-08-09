@@ -49,6 +49,12 @@ set backspace=indent,eol,start    " Backspace behaviour
 set undofile                      " Enable undo
 ret undodir=$HOME/.config/nvim/undo  " Undo store
 
+" NerdTree
+map <C-n> :NERDTreeToggle<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
+
 if filereadable(expand("~/.config/nvim/init.vim.bundles"))
   source ~/.config/nvim/init.vim.bundles
 endif
