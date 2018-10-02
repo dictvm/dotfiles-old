@@ -1,5 +1,10 @@
 prompt_context() {}
 
+# git
+alias gs="git status"
+alias gl="git pull"
+alias gp="git push"
+
 # Fix watch not working with aliases
 alias watch='watch '
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
