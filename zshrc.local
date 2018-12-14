@@ -64,4 +64,4 @@ source ~/.secrets
 
 export KOPS_STATE_STORE=s3://kops-kubernetes-state
 
-#source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
