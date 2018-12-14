@@ -26,10 +26,12 @@ alias vi=nvim
 alias nv=nvim
 
 # kubectl
+# kops export kubecfg --name $env-$version.k8s.ivx.cloud
 alias ki="kubectl --context infra.k8s.ivx.cloud"
 alias ks="kubectl --context staging.k8s.ivx.cloud"
 alias kp="kubectl --context production.k8s.ivx.cloud"
 alias km="kubectl --context minikube"
+alias kd="kubectl --context docker-for-desktop"
 
 # python
 alias python="python3"
