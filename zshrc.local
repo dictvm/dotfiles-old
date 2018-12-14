@@ -1,9 +1,11 @@
 prompt_context() {}
 
 # git
+eval "$(hub alias -s)"
 alias gs="git status"
 alias gl="git pull"
 alias gp="git push"
+alias gf="git fetch"
 
 # Fix watch not working with aliases
 alias watch='watch '
@@ -48,6 +50,7 @@ source <(kops completion zsh)
 # Put completion files in ~/.zsh/completion
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
+source <(kubesec completion zsh)
 
 # source private data that doesn't belong in a git repo.
 source ~/.secrets
