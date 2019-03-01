@@ -51,14 +51,12 @@ alias tmux="TERM=screen-256color tmux"
 # completion
 source <(kubectl completion zsh)
 source <(kops completion zsh)
+source <(kubesec completion zsh)
 # Put completion files in ~/.zsh/completion
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
-source <(kubesec completion zsh)
 
 # source private data that doesn't belong in a git repo.
 source ~/.secrets
 
 export KOPS_STATE_STORE=s3://kops-kubernetes-state
-
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
